@@ -6,7 +6,7 @@ choices = 'file/choices.txt'
 one = Question(questions,answers,choices)
 one.get_anything()
 one.show_hello()
-input("找个人来上来做")
+input("找个人来上来做\n")
 while one.active:
     try:
         one.pop_up()
