@@ -24,26 +24,27 @@ def seve_list(name):
     chose = input("如果为单元素集合请输入'E',如果是多元素集合请输入'L'")
 
     if chose == 'E':
-        print("你是大傻子吗,老子出的题里横是一个单元素集合都没有.")
-        print("没有返回程序,你重开吧")
-        sys.exit()
+        input("你是大傻子吗,老子出的题里横是一个单元素集合都没有.")
+        input("没有返回程序,你重开吧")
+        while True:
+            print("笨蛋!")
 
     elif chose == 'L':
         print("好的,接下来请依次输入集合中的元素,如果输入完毕后按'q'后回车")
         while True:
-            one = input('请输入元素后回车.')
+            one = input("请输入元素后回车(输入'q'停止添加):")
             if one != 'q':
                 ones.append(one)
-                print('元素' + str(one) + '添加完成!')
+                print('\n元素 [' + str(one) + '] 添加完成!\n')
 
             elif one == 'q':
                 break
     else:
         print("让你输入'E'或者'L',你输了个什么玩意.你没救了 重开吧")
-        sys.exit()
-        
+
+    print("\n集合 [" + name + "] 创建完毕!\n")
     return ones
-    print("集合" + name + "创建完毕!")
+    
 
 #C = seve_list('C')
 #print(C)
