@@ -1,4 +1,4 @@
-from main import draw_list,seve_list,peace_list
+from main import draw_list,seve_list,peace_list,list_len,zero_one
 
 print("现在我将一步步引导你使用这个程序\n")
 input("按任意键继续:")
@@ -14,7 +14,7 @@ if down == 'e':
         active = input("还想多生几个就按'e',不想生了就按'q'")
         if active == 'q':
             print("集合创建完毕.")
-            input("你共创建了以下集合:")
+            print("你共创建了以下集合:")
             for k,v in lists.items():
                 print("集合"+ str(k) + "="+ str(v))
             break
@@ -29,5 +29,14 @@ else:
     while True:
         print("笨蛋!")
 
-print("现在你已经完成了集合的创建,虽然不知道你生了几个集合")
-print("但我目前只用得到两个")
+input("\n现在你已经完成了集合的创建")
+input("虽然不知道你生了几个集合")
+input("但我目前只用得到两个")
+input("因为我想求她们的交集 :) ")
+input("输入任意键运行求交集程序 :)\n ")
+list_one_name = input('第一个集合的昵称为(别输错了!): ')
+list_two_name = input('第二个集合的昵称为(别输错了!): ')
+#print(lists[list_two_name])
+peace_list = peace_list(lists[list_one_name],lists[list_two_name],list_one_name,list_two_name)
+print("所得交集为:\n")
+print(peace_list)
